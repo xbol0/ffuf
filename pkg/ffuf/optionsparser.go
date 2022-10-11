@@ -31,6 +31,7 @@ type HTTPOptions struct {
 	FollowRedirects   bool
 	Headers           []string
 	IgnoreBody        bool
+	Insecure          bool
 	Method            string
 	ProxyURL          string
 	Recursion         bool

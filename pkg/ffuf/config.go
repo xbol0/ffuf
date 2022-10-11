@@ -29,6 +29,7 @@ type Config struct {
 	InputNum                int                   `json:"cmd_inputnum"`
 	InputProviders          []InputProviderConfig `json:"inputproviders"`
 	InputShell              string                `json:"inputshell"`
+	Insecure                bool                  `json:"insecure"`
 	Json                    bool                  `json:"json"`
 	MatcherManager          MatcherManager        `json:"matchers"`
 	MatcherMode             string                `json:"mmode"`
@@ -86,6 +87,7 @@ func NewConfig(ctx context.Context, cancel context.CancelFunc) Config {
 	conf.InputNum = 0
 	conf.InputShell = ""
 	conf.InputProviders = make([]InputProviderConfig, 0)
+	conf.Insecure = false
 	conf.Json = false
 	conf.MatcherMode = "or"
 	conf.MaxTime = 0
